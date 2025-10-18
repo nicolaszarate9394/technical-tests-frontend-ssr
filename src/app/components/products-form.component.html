@@ -1,0 +1,22 @@
+<p-card header="{{productId ? 'Editar Producto' : 'Nuevo Producto'}}">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="p-field">
+      <label for="name">Nombre</label>
+      <input id="name" type="text" pInputText formControlName="name">
+    </div>
+    <div class="p-field">
+      <label for="description">Descripción</label>
+      <input id="description" type="text" pInputText formControlName="description">
+    </div>
+    <div class="p-field">
+      <label for="price">Precio</label>
+      <input id="price" type="number" pInputText formControlName="price">
+    </div>
+    <div class="p-field">
+      <label for="stock">Stock</label>
+      <input id="stock" type="number" pInputText formControlName="stock">
+    </div>
+    
+    <button pButton type="submit" label="Guardar"></button> 
+  </form>
+</p-card>
